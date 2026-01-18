@@ -1,0 +1,75 @@
+# GRUPO 0. Archivos de sistema y entorno
+__pycache__/
+*.pyc
+.DS_Store 
+# Cuando ejecuto Python, él crea archivos temporales para ir más rápido (como borradores sucios)
+# .DS_Store es un archivo oculto que crean las Mac para recordar la posición de los íconos. 
+# el * significa "cualquier archivo con esta extensión"
+
+# Variables de entorno y secretos (AQUÍ ESTÁ LA CLAVE DE LA SEGURIDAD)
+.env
+config.yaml
+secrets.py
+credentials.json
+token.json
+client_secret.json
+# Cuando conecte el proyecto a Gmail, Google me va a dar un archivo
+# llamado credentials.json o token.json con mis llaves de acceso. 
+
+
+
+# Carpetas de entornos virtuales (peso muerto)
+venv/
+env/
+.venv
+# Son carpetas donde se instalan las librerías (pandas, numpy, etc.)
+# pesan mucho. 500MB o mas.
+# En github no guardo librerías, sólo mi código. 
+
+
+
+# GRUPO 02. Archivos top Secret (nombres que son standares internacionales para
+# guardar llaves y configuraciones locales)
+
+.env
+#el estandar absoluto que guarda las variables "de entorno"
+# como contraseñas DB, API Keys) en formato CLAVE=VALOR
+# Casi todas las librerías de python buscan este archivo automáticamente
+
+id_rsa
+id_rsa.pub
+*.pem
+# Son llaves criptográficas (SSH Keys) para acceder a servidores remotos (AWS, DigitalOcean)
+# Los archivos con extension  .pem  o rsa son llaves maestras. Nunca se suben.
+
+settings_local.py
+# En frameworks grandes (como Django) a veces tengo un settings.py general y un 
+# settings_local.py solo para mí máquina. 
+
+coverage.xml
+.coverage
+# Cuando corro tests automáticos para ver que % de mi código estpa probado, se general estos reportes. 
+# Son basura para el repositorio, son solo para mi. 
+
+
+# --- Estándares de Industria (Agregados) ---
+
+# Archivos de entorno (Nombres comunes)
+.env
+.env.local
+.env.development
+.env.test
+
+# Logs (Registros de errores)
+*.log
+npm-debug.log*
+
+# Llaves de acceso a servidores (CRÍTICO)
+*.pem
+*.key
+id_rsa
+id_dsa
+
+# Reportes de Tests
+.coverage
+htmlcov/
