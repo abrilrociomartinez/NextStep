@@ -20,11 +20,11 @@
 ## Funcionalidades (En desarrollo)
 - **Filtro Inteligente:** Distingue entre rechazos y avances en procesos de selección usando palabras clave. 
 - **Detección de Deadlines:** Extrae fechas (ej: "dentro de 48 horas") para que no se pase ninguna prueba técnica. 
-- **Intgración con Gmail:** Conexión directa vía API para leer y clasificar correos. 
+- **Integración con Gmail:** Conexión directa vía API para leer y clasificar correos. 
 
 
 ## Tecnologías 
-- **Lenguage:** Python 3.10+
+- **Lenguaje:** Python 3.10+
 - **Librerías:** `imaplib`, `email`, `re` (Regex)
 
 ## Autora
