@@ -1,4 +1,20 @@
-# NextStep
+# NextStep - English version
+
+**NextStep** is an intelligent automation assistant designed to streamline recruitment workflows. Its goal is to filter incoming emails, detect deadlines for technical tests and interviews, and automatically organize the schedule to ensure no opportunity is missed.
+
+## Features (In Development)
+- **Smart Filtering:** Distinguishes between rejections and next steps in selection processes using keyword analysis.
+- **Deadline Detection:** Extracts dates and timeframes (e.g., "within 48 hours") to prioritize technical tests.
+- **Gmail Integration:** Direct API connection to read, classify, and manage emails securely.
+
+## Tech Stack
+- **Language:** Python 3.10+
+- **Libraries:** `imaplib`, `email`, `re` (Regex)
+
+## Author
+**Abril Rocío Martínez** - *Law Student | Data Engineering & Cybersecurity Apprentice*
+
+# NextStep - Spanish version
 **NextStep** es un asistente inteligente de automatización para procesos de reclutamiento. Su objetivo es filtrar correos electrónicos, detectar plazos de tests y entrevistas y organizar la agenda automáticamente.
 
 ## Funcionalidades (En desarrollo)
