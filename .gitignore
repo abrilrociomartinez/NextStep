@@ -73,3 +73,12 @@ id_dsa
 # Reportes de Tests
 .coverage
 htmlcov/
+
+# Archivos temporales basura 
+tempCodeRunnerFile.py
+
+*.code-workspace
+__pycache__/
+
+# PERSONALES
+email-classifier-test.py
