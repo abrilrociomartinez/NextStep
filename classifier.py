@@ -111,7 +111,7 @@ def detect_signals(
         "rejection" : [],
         "moving_forward": [],
         "neutral": []
-}
+    }
 
     for word in rejection_keywords:
         if word in email_text:
@@ -150,5 +150,22 @@ signals = detect_signals(
 )
 status = decide_status(signals)
 
+rejection_count = len(signals["rejection"])
+moving_forward_count = len(signals["moving_forward"])
+neutral_count = len(signals["neutral"])
+
+
 print(signals)
+
+# Para contar la cantidad de señales "Si al contar las señales del diccionario "rejection" dan un número mayor que cero, imprime la cantidad de señales.
+if len(signals["rejection"]) > 0:
+    print("Rejection signals detected:", rejection_count)
+
+if len(signals["moving_forward"]) > 0:
+    print("Moving forward signals detected:", moving_forward_count)
+
+if len(signals["neutral"]) > 0:
+    print("Neutral signals detected:", neutral_count)
+
 print(status)
+
