@@ -80,5 +80,8 @@ tempCodeRunnerFile.py
 *.code-workspace
 __pycache__/
 
-# PERSONALES
+# Archivos para ignorar 
 email-classifier-test.py
+logic_test.py
+portapapeles.py
+
