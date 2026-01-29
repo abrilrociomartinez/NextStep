@@ -1,19 +1,6 @@
-# Solamente las listas
+# Keyword sets for classification. 
 
-rejection_keywords = ["unfortunately", 
-                      "not to move forward", 
-                      "desafortunadamente", 
-                      "no seguir con tu proceso de selección", 
-                      "have moved forward", "other candidates", 
-                      "continue seeking", 
-                      "pero agradecemos", 
-                      "no", 
-                      "hemos decidido no seguir con tu proceso de selección", 
-                      "more closely align with", 
-                      "encorauge", 
-                      "better match"]
-
-moving_forward_keywords = ["time sensitive", 
+MOVING_FORWARD_KEYWORDS = {"time sensitive", 
                            "next steps on your application", 
                            "Onboarding", 
                            "still missing", 
@@ -72,12 +59,26 @@ moving_forward_keywords = ["time sensitive",
                            "Teams", 
                            "encuentro", 
                            "minutos", 
-                           "minutos", 
                            "brief", 
                            "Google Meets", 
-                           "te esperamos"]
+                           "te esperamos"}
 
-neutral_keywords = ["participar en la conversación", 
+
+REJECTION_KEYWORDS = {"unfortunately", 
+                      "not to move forward", 
+                      "desafortunadamente", 
+                      "no seguir con tu proceso de selección", 
+                      "have moved forward", "other candidates", 
+                      "continue seeking", 
+                      "pero agradecemos", 
+                      "no", 
+                      "hemos decidido no seguir con tu proceso de selección", 
+                      "more closely align with", 
+                      "encorauge", 
+                      "better match"}
+
+
+NEUTRAL_KEYWORDS = {"participar en la conversación", 
                     "artículo", 
                     "submitted successfully", 
                     "we wanted to share with you some of our latest job opportunities", 
@@ -85,4 +86,4 @@ neutral_keywords = ["participar en la conversación",
                     "descubre empleos similares", 
                     "verify your", 
                     "account", 
-                    "Se ha enviado tu solicitud a"]
+                    "Se ha enviado tu solicitud a"}
