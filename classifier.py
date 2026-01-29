@@ -1,4 +1,11 @@
-def detect_signals(email_text, rejection_keywords, moving_forward_keywords, neutral_keywords):
+from tipyng import Dict, List
+
+def detect_signals(
+        email_text: str,
+        rejection_keywords: List[str],
+        moving_forward_keywords: List [str],
+        neutral_keywords: List[str]
+)-> Dict[str, List[str]]:
 
 # Analizes email content and categorizes detected keywords.
 
@@ -6,17 +13,17 @@ def detect_signals(email_text, rejection_keywords, moving_forward_keywords, neut
 
 # Initialize dictionary to store found signals.
     found = {
-        "moving_forward":[],
         "rejection": [],
+        "moving_forward":[],
         "neutral": []
-}
+    }
 
 # Map categories to their respective keyword sets for efficient iteration. 
     categories = {
+        "rejection": rejection_keywords,
         "moving_forward": moving_forward_keywords,
-        "rejection": rejection_keywords, 
         "neutral": neutral_keywords
-}
+    }
 
 # Single loop to process al categories (DRY Principle).
     for category, keywords in categories.items():
@@ -25,19 +32,21 @@ def detect_signals(email_text, rejection_keywords, moving_forward_keywords, neut
                 found[category].append(word)
 
 
-    return found
+    return found   # El return siempre va fuera de lo loops, al final de la funcion. 
 
 
 
-def decide_status(signals: Dict:[str, List[str]]) -> str:
+from tipyng import Dict, List
+
+def decide_status(signals: Dict[str, List[str]]) -> str:
 
 # Determines the final status based on detected signals priority.
 
-    if signals["moving_forward"]:
-        return "Moving forward"
-   
     if signals["rejection"]:
         return "Rejection"
+    
+    if signals["moving_forward"]:
+        return "Moving forward"
   
     if signals["neutral"]:
         return "Neutral"

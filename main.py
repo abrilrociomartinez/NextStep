@@ -7,15 +7,15 @@ from classifier import detect_signals, decide_status
 
 def run_analysis(test_email: str):
     # Orchestrates the email analysis process and prints formatted results.
-    print(f"--- Analizing Email ---")
+    print(f"--- Analyzing Email ---")
 
 
     # 1. Detect the signals
 
     signals = detect_signals(
         email_text=test_email,
-        moving_forward_keywords=moving_forward_keywords, 
         rejection_keywords=rejection_keywords,
+        moving_forward_keywords=moving_forward_keywords, 
         neutral_keywords=neutral_keywords
     )
 
@@ -23,7 +23,7 @@ def run_analysis(test_email: str):
     status = decide_status(signals)
 
     # 3. Show detailed results
-    print(f"Fianl Result: {status}")
+    print(f"Final Result: {status}")
     print(f"Signals found: {signals}")
     print("-" * 20)
 
