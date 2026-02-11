@@ -1,21 +1,24 @@
 # Import keyword lists used to detect signals in the email text.
+""" 
+Keyword definitions for email classification.
+These sets are language-agnostic and can be expanded or externalized (JSON/DB).
+"""
 from keywords import (
-    moving_forward_keywords,
-    rejection_keywords,
-    neutral_keywords
+    MOVING_FORWARD_KEYWORDS,
+    REJECTION_KEYWORDS,
+    NEUTRAL_KEYWORDS
 )
 
 # Import core classification logic functions.
 from classifier import detect_signals, decide_status
 
-def analize_email(test_email: str) -> dict:
-# Analizes a single email and returns structured results. 
-
+def analyze_email(email_text: str) -> dict:
+# Analizes a single email and returns structured results.
 
     # Call the classifier to detect keyword-based signals.
 
     signals = detect_signals(
-        email_text=test_email,
+        email_text=email_text,
         rejection_keywords=rejection_keywords,
         moving_forward_keywords=moving_forward_keywords, 
         neutral_keywords=neutral_keywords

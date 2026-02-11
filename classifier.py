@@ -1,4 +1,4 @@
-from tipyng import Dict, List
+from typing import Dict, List
 
 def detect_signals(
         email_text: str,
@@ -34,9 +34,6 @@ def detect_signals(
 
     return found   # El return siempre va fuera de lo loops, al final de la funcion. 
 
-
-
-from tipyng import Dict, List
 
 def decide_status(signals: Dict[str, List[str]]) -> str:
 

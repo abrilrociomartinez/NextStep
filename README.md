@@ -1,6 +1,21 @@
 # NextStep - English version
 
-**NextStep** is an intelligent automation assistant designed to streamline recruitment workflows. Its goal is to filter incoming emails, detect deadlines for technical tests and interviews, and automatically organize the schedule to ensure no opportunity is missed.
+**NextStep** is a keyword-based email classification pipeline focused on recruitment process outcomes. It is designed as a modular data-processing system, with future plans for automation and integrations. Its goal is to filter incoming emails, detect deadlines for technical tests and interviews, and automatically organize the schedule to ensure no opportunity is missed.
+
+## CurrentScope
+- Keyword-based email classification
+- Modular architecture (separation of concerns)
+- Structured outputs for future persistance (JSON / CSV)
+- Designed as a data processing pipeline
+
+## Roadmap
+- JSON and CSV persistance
+- Deadline extraction (regex + datetime)
+- Batch analysis with Pandas
+- Gmail API intgration
+- Database-ready schema
+- **Libraries:** `imaplib`, `email`, `re` (Regex)
+
 
 ## Features (In Development)
 - **Smart Filtering:** Distinguishes between rejections and next steps in selection processes using keyword analysis.
@@ -9,7 +24,7 @@
 
 ## Tech Stack
 - **Language:** Python 3.10+
-- **Libraries:** `imaplib`, `email`, `re` (Regex)
+
 
 ## Author
 **Abril Rocío Martínez** - *Law Student | Data Engineering & Cybersecurity Apprentice*
