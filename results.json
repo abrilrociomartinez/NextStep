@@ -1,0 +1,42 @@
+[
+    {
+        "id": "6507271e-63cd-43b0-8f36-d4121e9b468c",
+        "timestamp": "2026-02-12T17:35:58.045926-03:00",
+        "email_text": "Thank you for your application, we would like to invite you to an interview",
+        "status": "Moving forward",
+        "signals": {
+            "rejection": [],
+            "moving_forward": [
+                "interview"
+            ],
+            "neutral": []
+        }
+    },
+    {
+        "id": "9751ac86-e5b0-455f-ba04-9ff28fe9c253",
+        "timestamp": "2026-02-12T17:35:58.046087-03:00",
+        "email_text": "Unfortunately, we decided to move forward with other candidates",
+        "status": "Rejection",
+        "signals": {
+            "rejection": [
+                "unfortunately",
+                "other candidates"
+            ],
+            "moving_forward": [],
+            "neutral": []
+        }
+    },
+    {
+        "id": "15a1c43c-c35f-44a0-a6ad-8ed3266dd7fa",
+        "timestamp": "2026-02-12T17:35:58.046131-03:00",
+        "email_text": "Your application has been submitted successfully",
+        "status": "Neutral",
+        "signals": {
+            "rejection": [],
+            "moving_forward": [],
+            "neutral": [
+                "submitted successfully"
+            ]
+        }
+    }
+]

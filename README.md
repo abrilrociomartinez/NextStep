@@ -1,46 +1,96 @@
-# NextStep - English version
+# NextStep - Modular Email Classification Pipeline
 
-**NextStep** is a keyword-based email classification pipeline focused on recruitment process outcomes. It is designed as a modular data-processing system, with future plans for automation and integrations. Its goal is to filter incoming emails, detect deadlines for technical tests and interviews, and automatically organize the schedule to ensure no opportunity is missed.
+## Overview
 
-## CurrentScope
+NextStep is a modular email classification pipeline built in Python. 
+It analyzes recruitment-related emails and categorizes them into:
+
+- Moving Forward
+- Rejection
+- Neutral 
+
+
+The project is designed following clean architecture principles and structured as a scalable data-processing system. 
+
+---
+
+
+## Architecture 
+
+The project follows separation of concerns:
+
+- 'classifier.py' → Core business logic (signal detection & status decision)
+- 'persistence.py' → Data storage layer (JSON handling, ID generation, timestamps)
+- 'main.py' → Orchestration layer
+- 'results.json' → Structured output storage
+
+
+This modular design allows future expansion (database, APIs, analytics).
+
+
+---
+
+
+## Currect Features 
+
 - Keyword-based email classification
-- Modular architecture (separation of concerns)
-- Structured outputs for future persistance (JSON / CSV)
-- Designed as a data processing pipeline
-
-## Roadmap
-- JSON and CSV persistance
-- Deadline extraction (regex + datetime)
-- Batch analysis with Pandas
-- Gmail API intgration
-- Database-ready schema
-- **Libraries:** `imaplib`, `email`, `re` (Regex)
+- Batch email processing
+- Structured JSON persistance
+- Unique ID generation (UUID4)
+- ISO 8601 timestamp tracking (timezone-aware)
+- Corrupted JSON handling
+- Modular architecture (clean separation of responsabilities)
 
 
-## Features (In Development)
-- **Smart Filtering:** Distinguishes between rejections and next steps in selection processes using keyword analysis.
-- **Deadline Detection:** Extracts dates and timeframes (e.g., "within 48 hours") to prioritize technical tests.
-- **Gmail Integration:** Direct API connection to read, classify, and manage emails securely.
+---
+
+
+## Example Output Structure
+
+Each processed  email is stored as:
+
+
+```json
+{
+  "id": "uuid",
+  "timestamp": "ISO8601",
+  "email_text": "original email",
+  "status": "Moving forward / Rejection / Neutral",
+  "signals": {
+      "rejection": [],
+      "moving_forward": [],
+      "neutral": []
+  }
+}
+
+```
+---
+
 
 ## Tech Stack
-- **Language:** Python 3.10+
 
 
-## Author
-**Abril Rocío Martínez** - *Law Student | Data Engineering & Cybersecurity Apprentice*
-
-# NextStep - Spanish version
-**NextStep** es un asistente inteligente de automatización para procesos de reclutamiento. Su objetivo es filtrar correos electrónicos, detectar plazos de tests y entrevistas y organizar la agenda automáticamente.
-
-## Funcionalidades (En desarrollo)
-- **Filtro Inteligente:** Distingue entre rechazos y avances en procesos de selección usando palabras clave. 
-- **Detección de Deadlines:** Extrae fechas (ej: "dentro de 48 horas") para que no se pase ninguna prueba técnica. 
-- **Integración con Gmail:** Conexión directa vía API para leer y clasificar correos. 
+- Python 3.10+
+- JSON
+- Standard Library (uuid, datetime, pathlib)
 
 
-## Tecnologías 
-- **Lenguaje:** Python 3.10+
-- **Librerías:** `imaplib`, `email`, `re` (Regex)
+---
 
-## Autora
-**Abril Rocío Martínez** - *Law student | Data Engineering & Cybersecurity Apprentice*
+
+## Roadmap
+
+- Regex-based word boundary matching
+- Pandas analytics layer
+- CSV export
+- Database integration
+- Gmail API ingestion
+
+
+---
+
+
+## Author 
+
+Abril Rocío Martínez
+Law Student | Data Engineering Apprentice
